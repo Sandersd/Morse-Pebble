@@ -36,7 +36,7 @@ simply.on('longClick', function(e) {
   if(e.button === 'select') {
     sendMsg(localStorage.getItem('string'));
     simply.vibe('short');
-    string = '';
+    simply.subtitle('');
   }
 });
 
