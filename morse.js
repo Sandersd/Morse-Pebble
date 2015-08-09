@@ -38,6 +38,7 @@ simply.on('longClick', function(e) {
     simply.vibe('short');
     simply.subtitle('');
     string = '';
+    getMsg();
   }
 });
 
@@ -47,21 +48,25 @@ function sendMsg(msg) {
   ajax({url: URL, type: 'json'},
   function(json) {
     // Data is supplied here
-    //simply.subtitle(json);
-    var newUrl = 'http://morsepebble.meteor.com/api/messages/new/';
-    ajax({url: newUrl, type: 'json'},
-    function(json) {
-    // Data is supplied here
-    simply.subtitle(json);
-  },
-  function(error) {
-    console.log('Ajax failed: ' + error);
-  }
-);
+    simply.subtitle('loading..');
+
 
   },
   function(error) {
     subtitle('Ajax failed');
   }
+);
+}
+
+function getMsg() {
+  var newUrl = 'http://morsepebble.meteor.com/api/messages/new/';
+  ajax({url: newUrl, type: 'json'},
+  function(json) {
+  // Data is supplied here
+  simply.subtitle(json);
+},
+function(error) {
+  console.log('Ajax failed: ' + error);
+}
 );
 }
