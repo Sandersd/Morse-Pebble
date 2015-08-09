@@ -30,7 +30,7 @@ simply.on('singleClick', function(e) {
   localStorage.setItem('string', string);
 });
 
-simply.text({ title: 'PebbleCode', subtitle: '' });
+simply.text({ title: 'MorsePebble', subtitle: '' });
 
 simply.on('longClick', function(e) {
   if(e.button === 'select') {
