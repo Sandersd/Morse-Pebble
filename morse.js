@@ -47,7 +47,18 @@ function sendMsg(msg) {
   ajax({url: URL, type: 'json'},
   function(json) {
     // Data is supplied here
-    simply.subtitle(json);
+    //simply.subtitle(json);
+    var newUrl = 'http://morsepebble.meteor.com/api/messages/new/';
+    ajax({url: newUrl, type: 'json'},
+    function(json) {
+    // Data is supplied here
+
+  },
+  function(error) {
+    console.log('Ajax failed: ' + error);
+  }
+);
+
   },
   function(error) {
     subtitle('Ajax failed');
