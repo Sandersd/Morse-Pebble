@@ -52,7 +52,7 @@ function sendMsg(msg) {
     ajax({url: newUrl, type: 'json'},
     function(json) {
     // Data is supplied here
-
+    simply.subtitle(json);
   },
   function(error) {
     console.log('Ajax failed: ' + error);
