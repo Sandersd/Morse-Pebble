@@ -17,7 +17,7 @@ simply.on('singleClick', function(e) {
       type: 'dash',
       at: count
     });*/
-    string += ''+'_';
+    string += ''+'-';
     simply.subtitle(string);
   } else if (e.button === 'select') {
     /*Dots.insert({
