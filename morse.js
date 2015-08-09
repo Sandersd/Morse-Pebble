@@ -42,11 +42,11 @@ simply.on('longClick', function(e) {
 
 function sendMsg(msg) {
   console.log(msg);
-  var URL = 'localhost:3000/api/messages/' + msg;
+  var URL = 'localhost:3000/api/messages/';
   ajax({url: URL, type: 'json'},
   function(json) {
     // Data is supplied here
-
+    JSON.stringify({ "msg": msg });
   },
   function(error) {
     console.log('Ajax failed: ' + error);
