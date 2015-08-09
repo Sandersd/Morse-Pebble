@@ -42,7 +42,7 @@ simply.on('longClick', function(e) {
 
 function sendMsg(msg) {
   console.log(msg);
-  var URL = 'http://morsepebble.meteor.com/api/messages/new/test';
+  var URL = 'http://morsepebble.meteor.com/api/messages/new/'+msg;
   ajax({url: URL, type: 'json'},
   function(json) {
     // Data is supplied here
