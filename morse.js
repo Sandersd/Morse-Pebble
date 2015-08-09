@@ -37,6 +37,7 @@ simply.on('longClick', function(e) {
     sendMsg(localStorage.getItem('string'));
     simply.vibe('short');
     simply.subtitle('');
+    string = '';
   }
 });
 
